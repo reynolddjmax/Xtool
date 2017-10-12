@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="access.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
     <Compile Include="Clipboard.cs" />
     <Compile Include="CodeAll.cs" />
     <Compile Include="CodeClass.cs" />
