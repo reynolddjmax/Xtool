@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xtool", "Xtool\Xtool.csproj", "{D52052F1-2805-4393-A7C8-FB6036325563}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLL", "..\ClassLibrary4\ClassLibrary1\DLL.csproj", "{D6E9CC26-78DE-479B-BB59-215239B841AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLL", "..\ClassLibrary\ClassLibrary1\DLL.csproj", "{D6E9CC26-78DE-479B-BB59-215239B841AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

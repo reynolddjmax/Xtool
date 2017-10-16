@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
 
         public static void CreatTxtFile(string FilePath, string Name)
         {
-            string DelPath = @"\\192.168.2.80\Xx\Del";
+            string DelPath = setting.DelTxtPath;
 
             if (Directory.Exists(DelPath) == false)
             {

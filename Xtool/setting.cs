@@ -11,5 +11,6 @@ namespace WindowsFormsApplication1
         public static System.Windows.Forms.RichTextBox LogBox;
 
         public static string TempDelTxtPath = Environment.CurrentDirectory + "\\Del";
+        public static string DelTxtPath = @"\\192.168.2.80\Xx\Del";
     }
 }

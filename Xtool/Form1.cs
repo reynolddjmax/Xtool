@@ -474,6 +474,7 @@ namespace WindowsFormsApplication1
                 if (AT == null)//不存在，添加listboxMD5值
                 {
                     this.listBoxMD5.Items.Add(MD5);
+                    n++;
                 }
                 else//存在，从listboxfile中移除，并添加Datatable
                 {
@@ -500,10 +501,12 @@ namespace WindowsFormsApplication1
                         MD5,
                         path
                         );
+
+                    
                 }
 
 
-                n++;
+                
                 this.label2.Text = n.ToString() + "/" + this.listBoxFile.Items.Count.ToString();
                 Application.DoEvents();
             }
