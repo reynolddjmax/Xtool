@@ -701,7 +701,66 @@ namespace WindowsFormsApplication1
 	        }
         }
 
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            this.richTextBox2.Text = "";
+            foreach (string item in this.listBoxFile.Items)
+            {
+                string Name = System.IO.Path.GetFileNameWithoutExtension(item);
+                this.richTextBox2.Text += Name + "\n";
+            }
 
+            this.richTextBox2.Text = this.richTextBox2.Text.Trim();
+        }
 
+        private void button14_Click(object sender, EventArgs e)
+        {
+            List<string> Namelst = System.Text.RegularExpressions.Regex.Split(this.richTextBox2.Text.Trim(),"\n").ToList<string>();
+            if (Namelst.Count != listBoxFile.Items.Count)
+            {
+                MessageBox.Show("文件数不一致");
+                return;
+            }
+
+            for (int i = 0; i < listBoxFile.Items.Count; i++)
+            {
+                string OriPath = listBoxFile.Items[i].ToString();
+
+                if (File.Exists(OriPath))
+                {
+                    File.Move(OriPath, Path.GetDirectoryName(OriPath) + "\\" + Namelst[i].Trim() + Path.GetExtension(OriPath));
+                }
+                else
+                {
+                    CodeAll.AddLog("文件改名失败", OriPath, "文件不存在");
+                }
+            }
+
+            MessageBox.Show("Done");
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            this.richTextBox2.Text = this.richTextBox2.Text.Replace(this.textBox2.Text, this.textBox3.Text);
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            List<string> Namelst = System.Text.RegularExpressions.Regex.Split(this.richTextBox2.Text.Trim(), "\n").ToList<string>();
+
+            this.richTextBox2.Text = "";
+
+            foreach (string item in Namelst)
+            {
+                string NewName = item.Substring(item.IndexOf("(") + 1);
+
+                NewName = NewName.Replace("  ", "");
+                NewName = NewName.Replace(") - ", " ");
+                NewName = NewName.Replace(") ", " ");
+                this.richTextBox2.Text += NewName + "\n";
+            }
+
+            this.richTextBox2.Text = this.richTextBox2.Text.Trim();
+        }
     }
 }
