@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace WindowsFormsApplication1
 {
@@ -135,15 +136,14 @@ namespace WindowsFormsApplication1
 
                 string DataType = GetDataType();
 
-                //创建文本数据库
+                //除了G创建文本数据库
                 if (DataType != "G")
                 {
                     CodeClass.CreatTxtFile(path, Name);
                 }
 
 
-                //创建MDB数据库
-
+                //除了TXT模式创建MDB数据库
                 if (DataType != "TXT")
                 {
                     //listboxMD5数据数量不一致就重新计算MD5
@@ -611,25 +611,30 @@ namespace WindowsFormsApplication1
                 string newName = item.Cells["Name2"].Value.ToString();
                 string MD5 = item.Cells["MD5"].Value.ToString();
                 string DataType = item.Cells["Type1"].Value.ToString();
-                //更新数据库文件名
+                bool IsDel = Convert.ToBoolean(item.Cells["IsDel"].Value);
 
+
+                //更新Del状态
+                access.UpdateAccess("update " + DataType + " set [IsDel] = " + IsDel + " where [MD5] = '" + MD5 + "'");
+
+                //如果Name2为空，则跳过
                 if (newName.Replace(" ", "") == "") continue;
 
-
+                //更新数据库文件名
                 access.UpdateAccess("update " + DataType + " set [Name] = '" + newName + "' where [MD5] = '" + MD5 + "'");
             }
 
-            //更新Datatable文件名称(所有行)
+            //更新Datatable文件名称(所有行)  Name  IsDel
 
             foreach (DataGridViewRow item  in this.dataGridView1.Rows)
             {
                 string MD5 = item.Cells["MD5"].Value.ToString();
                 string DataType = item.Cells["Type1"].Value.ToString();
 
+                access.AccessType AT = access.CheckData("", DataType, MD5);
 
-                DataTable dt = access.GetAccess("select [Name] from " + DataType + " where MD5='" + MD5 + "'");
 
-                string Name = dt.Rows[0][0].ToString();
+                string Name = AT.Name;
                 item.Cells["Name1"].Value = Name;
 
 
@@ -640,9 +645,25 @@ namespace WindowsFormsApplication1
                     item.Cells["Name2"].Value = "";
                 }
 
+                item.Cells["IsDel"].Value = AT.isDel;
+
             }
 
 
+        }
+
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dataGridView1.Rows)
+            {
+                item.Cells["IsDel"].Value = false;
+            }
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            DataTable dt = dataGridView1
         }
 
         private void buttonDelSame_Click(object sender, EventArgs e)
@@ -762,5 +783,14 @@ namespace WindowsFormsApplication1
 
             this.richTextBox2.Text = this.richTextBox2.Text.Trim();
         }
+
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            FormSearch fs = new FormSearch();
+            fs.Show();
+        }
+
+
     }
 }

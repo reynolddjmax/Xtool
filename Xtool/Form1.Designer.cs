@@ -49,15 +49,6 @@
             this.radioButtonTXT = new System.Windows.Forms.RadioButton();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IsDel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MD5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBoxfolder = new System.Windows.Forms.ListBox();
@@ -70,16 +61,28 @@
             this.buttonDelSame = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button18 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button16 = new System.Windows.Forms.Button();
+            this.IsDel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MD5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button19 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -279,74 +282,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1413, 357);
             this.dataGridView1.TabIndex = 18;
             // 
-            // IsDel
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.NullValue = false;
-            this.IsDel.DefaultCellStyle = dataGridViewCellStyle7;
-            this.IsDel.HeaderText = "IsDel";
-            this.IsDel.Name = "IsDel";
-            this.IsDel.Width = 40;
-            // 
-            // Name1
-            // 
-            this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Name1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Name1.FillWeight = 1000F;
-            this.Name1.HeaderText = "Name1(Data)";
-            this.Name1.Name = "Name1";
-            this.Name1.Width = 143;
-            // 
-            // Name2
-            // 
-            this.Name2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Red;
-            this.Name2.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Name2.FillWeight = 1000F;
-            this.Name2.HeaderText = "Name2(New)";
-            this.Name2.Name = "Name2";
-            this.Name2.Width = 134;
-            // 
-            // Type1
-            // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Type1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Type1.HeaderText = "Type1(Data)";
-            this.Type1.Name = "Type1";
-            // 
-            // Type2
-            // 
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Red;
-            this.Type2.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Type2.HeaderText = "Type2(New)";
-            this.Type2.Name = "Type2";
-            // 
-            // Size1
-            // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Size1.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Size1.HeaderText = "Size1(Data)";
-            this.Size1.Name = "Size1";
-            // 
-            // Size2
-            // 
-            this.Size2.HeaderText = "Size2(New)";
-            this.Size2.Name = "Size2";
-            // 
-            // MD5
-            // 
-            this.MD5.HeaderText = "MD5";
-            this.MD5.Name = "MD5";
-            // 
-            // FilePath
-            // 
-            this.FilePath.HeaderText = "FilePath";
-            this.FilePath.Name = "FilePath";
-            // 
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(9, 9);
@@ -427,12 +362,12 @@
             // button12
             // 
             this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button12.Location = new System.Drawing.Point(130, 465);
+            this.button12.Location = new System.Drawing.Point(1110, 468);
             this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(112, 34);
+            this.button12.Size = new System.Drawing.Size(227, 34);
             this.button12.TabIndex = 27;
-            this.button12.Text = "重命名";
+            this.button12.Text = "重命名选中行，更新del";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
@@ -477,6 +412,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button19);
+            this.tabPage1.Controls.Add(this.button18);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.button10);
             this.tabPage1.Controls.Add(this.button4);
@@ -496,6 +433,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "    DataBase    ";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button18.Location = new System.Drawing.Point(1344, 468);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(66, 34);
+            this.button18.TabIndex = 28;
+            this.button18.Text = "全否";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // tabPage2
             // 
@@ -529,6 +477,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button17);
             this.tabPage4.Controls.Add(this.button16);
             this.tabPage4.Controls.Add(this.textBox3);
             this.tabPage4.Controls.Add(this.textBox2);
@@ -543,6 +492,53 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "NameTool";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(32, 440);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(117, 44);
+            this.button17.TabIndex = 7;
+            this.button17.Text = "开始监视";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(1179, 64);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(186, 39);
+            this.button16.TabIndex = 6;
+            this.button16.Text = "S站名称去英文";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Location = new System.Drawing.Point(1179, 391);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(209, 28);
+            this.textBox3.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Location = new System.Drawing.Point(1179, 277);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(209, 28);
+            this.textBox2.TabIndex = 4;
+            // 
+            // button15
+            // 
+            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button15.Location = new System.Drawing.Point(1179, 328);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(117, 39);
+            this.button15.TabIndex = 3;
+            this.button15.Text = "替换";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -571,46 +567,89 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox2.Location = new System.Drawing.Point(19, 64);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(1139, 436);
+            this.richTextBox2.Size = new System.Drawing.Size(1139, 355);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
-            // button15
+            // IsDel
             // 
-            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button15.Location = new System.Drawing.Point(1179, 328);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(117, 39);
-            this.button15.TabIndex = 3;
-            this.button15.Text = "替换";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.NullValue = false;
+            this.IsDel.DefaultCellStyle = dataGridViewCellStyle7;
+            this.IsDel.HeaderText = "IsDel";
+            this.IsDel.Name = "IsDel";
+            this.IsDel.Width = 40;
             // 
-            // textBox2
+            // Name1
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(1179, 277);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 28);
-            this.textBox2.TabIndex = 4;
+            this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Name1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Name1.FillWeight = 1000F;
+            this.Name1.HeaderText = "Name1(Data)";
+            this.Name1.Name = "Name1";
+            this.Name1.Width = 143;
             // 
-            // textBox3
+            // Name2
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(1179, 391);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 28);
-            this.textBox3.TabIndex = 5;
+            this.Name2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Red;
+            this.Name2.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Name2.FillWeight = 1000F;
+            this.Name2.HeaderText = "Name2(New)";
+            this.Name2.Name = "Name2";
+            this.Name2.Width = 134;
             // 
-            // button16
+            // Type1
             // 
-            this.button16.Location = new System.Drawing.Point(1179, 64);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(186, 39);
-            this.button16.TabIndex = 6;
-            this.button16.Text = "S站名称去英文";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Type1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Type1.HeaderText = "Type1(Data)";
+            this.Type1.Name = "Type1";
+            // 
+            // Type2
+            // 
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Red;
+            this.Type2.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Type2.HeaderText = "Type2(New)";
+            this.Type2.Name = "Type2";
+            // 
+            // Size1
+            // 
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Size1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Size1.HeaderText = "Size1(Data)";
+            this.Size1.Name = "Size1";
+            // 
+            // Size2
+            // 
+            this.Size2.HeaderText = "Size2(New)";
+            this.Size2.Name = "Size2";
+            // 
+            // MD5
+            // 
+            this.MD5.HeaderText = "MD5";
+            this.MD5.Name = "MD5";
+            // 
+            // FilePath
+            // 
+            this.FilePath.HeaderText = "FilePath";
+            this.FilePath.Name = "FilePath";
+            this.FilePath.Width = 550;
+            // 
+            // button19
+            // 
+            this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button19.Location = new System.Drawing.Point(990, 468);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(113, 34);
+            this.button19.TabIndex = 29;
+            this.button19.Text = "筛选重复";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // Form1
             // 
@@ -667,15 +706,6 @@
         private System.Windows.Forms.ListBox listBoxMD5;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn IsDel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Size1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Size2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MD5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonDelSame;
         private System.Windows.Forms.TabControl tabControl1;
@@ -690,6 +720,18 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn IsDel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Size1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Size2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MD5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
+        private System.Windows.Forms.Button button19;
     }
 }
 
