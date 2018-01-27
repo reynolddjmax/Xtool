@@ -88,6 +88,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.button24 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -584,6 +585,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button24);
             this.tabPage4.Controls.Add(this.button21);
             this.tabPage4.Controls.Add(this.checkBox1);
             this.tabPage4.Controls.Add(this.button20);
@@ -712,6 +714,16 @@
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(309, 447);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(75, 23);
+            this.button24.TabIndex = 35;
+            this.button24.Text = "button24";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -798,6 +810,7 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
     }
 }
 

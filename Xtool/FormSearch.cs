@@ -89,6 +89,8 @@ namespace WindowsFormsApplication1
 
         bool isFirstTime = true;
 
+
+        //搜索剪切板内容
         void Doo(string Str)
         {
             if (isFirstTime)
@@ -110,9 +112,13 @@ namespace WindowsFormsApplication1
             {
 
             }
+            else if (radioButton4.Checked)
+            {
+                return;
+            }
 
 
-            
+
 
 
 
@@ -124,6 +130,44 @@ namespace WindowsFormsApplication1
 
             DLL.SystemCMD.RunCmd("cmd.exe","c:\\Soft\\everything\\Everything.exe -s \"" + Str + "\"");
         }
+
+        //拖入文件搜索
+        private void Form_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.All;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void Form_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] s = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            foreach (string o in s)
+            {
+                //搜索拖入的路径，是目录，扫描视频文件
+                string Str = "";
+                if (CodeAll.isVideo(o))
+                {
+                    if (radioButton1.Checked)
+                    {
+                        Str = getSerialName(o);
+                    }
+                    
+                }
+
+                if (Str != "") DLL.SystemCMD.RunCmd("cmd.exe", "c:\\Soft\\everything\\Everything.exe -s \"" + Str + "\"");
+
+
+            }
+
+        }
+
+
 
 
         //传入 XXX111 或XXX-111 返回 XXX 111
@@ -289,6 +333,9 @@ namespace WindowsFormsApplication1
 
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+        }
     }
 }

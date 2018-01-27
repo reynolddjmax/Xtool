@@ -31,6 +31,8 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -69,17 +71,44 @@
             this.radioButton3.Text = "All";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(25, 189);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(60, 22);
+            this.radioButton4.TabIndex = 3;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Off";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(313, 176);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 48);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Top";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormSearch
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 190);
+            this.ClientSize = new System.Drawing.Size(400, 249);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormSearch";
             this.Text = "FormSearch";
             this.Load += new System.EventHandler(this.FormSearch_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form_DragEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,5 +119,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Button button1;
     }
 }

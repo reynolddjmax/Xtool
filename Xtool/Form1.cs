@@ -786,7 +786,9 @@ namespace WindowsFormsApplication1
             {
                 string NewName = item.Substring(item.IndexOf("(") + 1);
 
-                NewName = NewName.Replace("  ", "");
+                NewName = NewName.Replace("  ", " ");
+                NewName = NewName.Replace("  ", " ");
+
                 NewName = NewName.Replace(") - ", " ");
                 NewName = NewName.Replace(") ", " ");
                 this.richTextBox2.Text += NewName + "\n";
@@ -814,7 +816,7 @@ namespace WindowsFormsApplication1
                 string NewName = item;
 
                 NewName = NewName.Replace("  "," ");
-                NewName = NewName.Replace("  ", " ");
+                NewName = NewName.Replace("  "," ");
 
                 NewName = NewName.Trim();
 
@@ -822,10 +824,19 @@ namespace WindowsFormsApplication1
 
 
 
-                if (serolst.Count >= 2)
+                if (serolst.Count >= 3)
                 {
-                    if (serolst[0].IndexOf("-") != -1) serolst[0] = serolst[0].ToUpper();
-                    if (serolst[1].IndexOf("-") != -1) serolst[1] = serolst[1].ToUpper();
+
+
+                    for (int i = 0; i < 3; i++)
+                    {
+                        if (serolst[i].IndexOf("-") != -1)
+                        {
+                            serolst[i] = serolst[i].ToUpper();
+                            break;
+                        }
+                    }
+
 
                     NewName = String.Join(" ", serolst);
                 }
@@ -843,7 +854,18 @@ namespace WindowsFormsApplication1
 
         private void button21_Click(object sender, EventArgs e)
         {
+            List<string> blst = System.Text.RegularExpressions.Regex.Split(this.richTextBox2.Text.Trim(), "\n").ToList<string>();
+            List<string> alst = new List<string>();
+            for (int i = 0; i < listBoxFile.Items.Count; i++)
+            {
+                string OriPath = System.IO.Path.GetFileNameWithoutExtension(listBoxFile.Items[i].ToString());
 
+                alst.Add(OriPath);
+            }
+
+            FormFileName fm = new FormFileName(alst, blst);
+            fm.ShowDialog();
+            fm.Dispose();
         }
 
         private void button22_Click(object sender, EventArgs e)
@@ -897,6 +919,11 @@ namespace WindowsFormsApplication1
             string xx = "里美ゆりあ\n7777";
             DLL.TxtStr.Write(xx, @"C:\Users\Public\Desktop\ConcatVideo\11.txt", true, System.Text.Encoding.GetEncoding("UTF-8"));
         
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
