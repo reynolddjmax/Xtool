@@ -207,7 +207,7 @@ namespace WindowsFormsApplication1
 
                 if (System.IO.File.Exists(o))
                 {
-                    if (CodeAll.isVideo(o))
+                    if (CodeAll.isVideo(o) || checkBox1.Checked)
                     {
                         this.listBoxFile.Items.Add(o);
                     }
@@ -284,28 +284,30 @@ namespace WindowsFormsApplication1
 
         private void button7_Click(object sender, EventArgs e)
         {
-            foreach (string item in this.listBoxFile.Items)
+            string aa = @"Y:\XX\download\蒼井そら全集\040730 XS-2349 Lollipop.avi";
+
+            long lSize = new FileInfo(aa).Length;
+            string size = "";
+
+            if (lSize >= 1073741824)
             {
-                string name = System.IO.Path.GetFileName(item);
-
-                string namepath = System.IO.Path.GetDirectoryName(item);
-
-
-                name = name.Replace(".mp4", "");
-                name = name.Replace(".mkv", "");
-                name = name.Replace(".flv", "");
-                name = name.Replace(".wmv", "");
-                name = name.Replace(".rmvb", "");
-                name = name.Replace(".rm", "");
-                name = name.Replace(".mov", "");
-                name = name.Replace(".3gp", "");
-                name = name.Replace(".avi", "");
-
-                    System.IO.File.Move(item, namepath + "\\" +name);
-
-
-
+                size = (lSize / 1024.00 / 1024.00 / 1024.00).ToString("F2") + "G";
             }
+            else if (lSize >= 1048576)
+            {
+                size = (lSize / 1024.00 / 1024.00).ToString("F2") + "MB";
+            }
+            else if (lSize >= 1024)
+            {
+                size = (lSize / 1024.00).ToString("F2") + "KB";
+            }
+            else
+            {
+                size = lSize.ToString("F2") + "B";
+            }
+
+
+            MessageBox.Show(size);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -663,7 +665,7 @@ namespace WindowsFormsApplication1
 
         private void button19_Click(object sender, EventArgs e)
         {
-            DataTable dt = dataGridView1
+            
         }
 
         private void buttonDelSame_Click(object sender, EventArgs e)
@@ -727,7 +729,16 @@ namespace WindowsFormsApplication1
             this.richTextBox2.Text = "";
             foreach (string item in this.listBoxFile.Items)
             {
-                string Name = System.IO.Path.GetFileNameWithoutExtension(item);
+                string Name = "";
+                if (System.IO.File.Exists(item))
+                {
+                    Name = System.IO.Path.GetFileNameWithoutExtension(item);
+                }
+                else
+                {
+                    MessageBox.Show("不存在" + item);
+                }
+
                 this.richTextBox2.Text += Name + "\n";
             }
 
@@ -791,6 +802,101 @@ namespace WindowsFormsApplication1
             fs.Show();
         }
 
+        private void button20_Click(object sender, EventArgs e)
+        {
 
+            List<string> Namelst = System.Text.RegularExpressions.Regex.Split(this.richTextBox2.Text.Trim(), "\n").ToList<string>();
+
+            this.richTextBox2.Text = "";
+
+            foreach (string item in Namelst)
+            {
+                string NewName = item;
+
+                NewName = NewName.Replace("  "," ");
+                NewName = NewName.Replace("  ", " ");
+
+                NewName = NewName.Trim();
+
+                List<string> serolst = NewName.Split(' ').ToList<string>();
+
+
+
+                if (serolst.Count >= 2)
+                {
+                    if (serolst[0].IndexOf("-") != -1) serolst[0] = serolst[0].ToUpper();
+                    if (serolst[1].IndexOf("-") != -1) serolst[1] = serolst[1].ToUpper();
+
+                    NewName = String.Join(" ", serolst);
+                }
+
+
+
+
+                this.richTextBox2.Text += NewName + "\n";
+            }
+
+            this.richTextBox2.Text = this.richTextBox2.Text.Trim();
+
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            string WorkPath = @"Y:\XX\ConcatVideo\";
+            System.IO.Directory.CreateDirectory(WorkPath);
+            string txtLst = "";
+            string txtSh = "";
+
+            int index = 0;
+            foreach (string folder in listBoxfolder.Items)
+            {
+
+
+                List<string> files = CodeAll.ScanVideo(folder, "*", SearchOption.TopDirectoryOnly);
+
+                if (files.Count < 2) continue;
+                files.Sort();
+
+                string txtConcat = "";
+
+                txtLst += folder + "\r\n";
+                foreach (string file in files)
+                {
+                    txtLst += "\t\t" + System.IO.Path.GetFileName(file) + "\r\n";
+                    txtConcat += "file '" + ConcatTransFolder(file) + "'\n";
+                }
+
+                DLL.TxtStr.Write(txtConcat, WorkPath + index.ToString()+ ".txt" , true, new System.Text.UTF8Encoding(false));
+
+                txtSh += "ffmpeg -f concat -safe 0 -i " + index.ToString() + ".txt" +  " -c copy " + " '" + ConcatTransFolder(folder) + "/all" + System.IO.Path.GetExtension(files[0]) + "'\n";
+
+                txtSh += "chmod 777 '" + ConcatTransFolder(folder) + "/all" + System.IO.Path.GetExtension(files[0]) + "'\n";
+
+                index++;
+            }
+
+            DLL.TxtStr.Write(txtSh, WorkPath + "x.sh", true ,new System.Text.UTF8Encoding(false));
+            DLL.TxtStr.Write(txtLst, WorkPath + "lst.txt",true);
+        }
+
+        string ConcatTransFolder(string folder)
+        {
+            folder = folder.Replace("\\", "/");
+            folder = folder.Replace("Y:/", "/home/Raid/");
+            return folder;
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            string xx = "里美ゆりあ\n7777";
+            DLL.TxtStr.Write(xx, @"C:\Users\Public\Desktop\ConcatVideo\11.txt", true, System.Text.Encoding.GetEncoding("UTF-8"));
+        
+        }
     }
 }

@@ -47,11 +47,36 @@ namespace WindowsFormsApplication1
                 return;
             }
 
-            string TxtPath = DelPath + "\\" + Name + ".txt";
+            //获取文件大小
+
+
+            long lSize = new FileInfo(FilePath).Length;
+            string size = "";
+
+            if (lSize >= 1073741824)
+            {
+                size = (lSize / 1024.00 / 1024.00 / 1024.00).ToString("F2") + "G";
+            }
+            else if (lSize >= 1048576)
+            {
+                size = (lSize / 1024.00 / 1024.00).ToString("F2") + "MB";
+            }
+            else if (lSize >= 1024)
+            {
+                size = (lSize / 1024.00).ToString("F2") + "KB";
+            }
+            else
+            {
+                size = lSize.ToString("F2") + "B";
+            }
+
+            //////////////////////////////////////////////
+
+            string TxtPath = DelPath + "\\" + Name + " " + size + ".txt";
 
             if (File.Exists(TxtPath) == false)
             {
-                FileStream myFs = new FileStream(DelPath + "\\" + Name + ".txt", FileMode.Create);
+                FileStream myFs = new FileStream(TxtPath, FileMode.Create);
                 myFs.Close();
             }
             else

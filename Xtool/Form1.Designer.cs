@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.listBoxFile = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,6 +49,15 @@
             this.radioButtonTXT = new System.Windows.Forms.RadioButton();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IsDel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MD5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBoxfolder = new System.Windows.Forms.ListBox();
@@ -61,10 +70,16 @@
             this.buttonDelSame = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button21 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button20 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -73,16 +88,6 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.IsDel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MD5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button19 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -113,7 +118,7 @@
             this.listBoxFile.Location = new System.Drawing.Point(18, 54);
             this.listBoxFile.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxFile.Name = "listBoxFile";
-            this.listBoxFile.Size = new System.Drawing.Size(1046, 202);
+            this.listBoxFile.Size = new System.Drawing.Size(1045, 202);
             this.listBoxFile.TabIndex = 1;
             // 
             // button2
@@ -152,7 +157,7 @@
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(1336, 822);
+            this.button6.Location = new System.Drawing.Point(1335, 826);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(112, 34);
@@ -167,10 +172,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Font = new System.Drawing.Font("宋体", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Red;
-            this.richTextBox1.Location = new System.Drawing.Point(21, 866);
+            this.richTextBox1.Location = new System.Drawing.Point(21, 870);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1426, 146);
+            this.richTextBox1.Size = new System.Drawing.Size(1425, 146);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
@@ -279,8 +284,77 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1413, 357);
+            this.dataGridView1.Size = new System.Drawing.Size(1412, 350);
             this.dataGridView1.TabIndex = 18;
+            // 
+            // IsDel
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.NullValue = false;
+            this.IsDel.DefaultCellStyle = dataGridViewCellStyle1;
+            this.IsDel.HeaderText = "IsDel";
+            this.IsDel.Name = "IsDel";
+            this.IsDel.Width = 40;
+            // 
+            // Name1
+            // 
+            this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Name1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Name1.FillWeight = 1000F;
+            this.Name1.HeaderText = "Name1(Data)";
+            this.Name1.Name = "Name1";
+            this.Name1.Width = 143;
+            // 
+            // Name2
+            // 
+            this.Name2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Red;
+            this.Name2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Name2.FillWeight = 1000F;
+            this.Name2.HeaderText = "Name2(New)";
+            this.Name2.Name = "Name2";
+            this.Name2.Width = 134;
+            // 
+            // Type1
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Type1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Type1.HeaderText = "Type1(Data)";
+            this.Type1.Name = "Type1";
+            // 
+            // Type2
+            // 
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Red;
+            this.Type2.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Type2.HeaderText = "Type2(New)";
+            this.Type2.Name = "Type2";
+            // 
+            // Size1
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Size1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Size1.HeaderText = "Size1(Data)";
+            this.Size1.Name = "Size1";
+            // 
+            // Size2
+            // 
+            this.Size2.HeaderText = "Size2(New)";
+            this.Size2.Name = "Size2";
+            // 
+            // MD5
+            // 
+            this.MD5.HeaderText = "MD5";
+            this.MD5.Name = "MD5";
+            // 
+            // FilePath
+            // 
+            this.FilePath.HeaderText = "FilePath";
+            this.FilePath.Name = "FilePath";
+            this.FilePath.Width = 550;
             // 
             // button8
             // 
@@ -307,10 +381,10 @@
             this.listBoxfolder.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listBoxfolder.FormattingEnabled = true;
             this.listBoxfolder.ItemHeight = 18;
-            this.listBoxfolder.Location = new System.Drawing.Point(4, 78);
+            this.listBoxfolder.Location = new System.Drawing.Point(4, 89);
             this.listBoxfolder.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxfolder.Name = "listBoxfolder";
-            this.listBoxfolder.Size = new System.Drawing.Size(1409, 436);
+            this.listBoxfolder.Size = new System.Drawing.Size(1408, 418);
             this.listBoxfolder.TabIndex = 21;
             // 
             // button9
@@ -340,7 +414,7 @@
             this.listBoxMD5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxMD5.FormattingEnabled = true;
             this.listBoxMD5.ItemHeight = 18;
-            this.listBoxMD5.Location = new System.Drawing.Point(1076, 54);
+            this.listBoxMD5.Location = new System.Drawing.Point(1075, 54);
             this.listBoxMD5.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxMD5.Name = "listBoxMD5";
             this.listBoxMD5.Size = new System.Drawing.Size(368, 202);
@@ -350,7 +424,7 @@
             // button11
             // 
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button11.Location = new System.Drawing.Point(9, 465);
+            this.button11.Location = new System.Drawing.Point(9, 469);
             this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(112, 34);
@@ -362,7 +436,7 @@
             // button12
             // 
             this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button12.Location = new System.Drawing.Point(1110, 468);
+            this.button12.Location = new System.Drawing.Point(1110, 469);
             this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(227, 34);
@@ -384,7 +458,7 @@
             // buttonDelSame
             // 
             this.buttonDelSame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelSame.Location = new System.Drawing.Point(1306, 10);
+            this.buttonDelSame.Location = new System.Drawing.Point(1305, 10);
             this.buttonDelSame.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDelSame.Name = "buttonDelSame";
             this.buttonDelSame.Size = new System.Drawing.Size(142, 34);
@@ -403,11 +477,11 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.ItemSize = new System.Drawing.Size(108, 20);
-            this.tabControl1.Location = new System.Drawing.Point(21, 267);
+            this.tabControl1.Location = new System.Drawing.Point(21, 279);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1425, 546);
+            this.tabControl1.Size = new System.Drawing.Size(1424, 539);
             this.tabControl1.TabIndex = 31;
             // 
             // tabPage1
@@ -429,15 +503,26 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1417, 518);
+            this.tabPage1.Size = new System.Drawing.Size(1416, 511);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "    DataBase    ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button19
+            // 
+            this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button19.Location = new System.Drawing.Point(990, 469);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(113, 34);
+            this.button19.TabIndex = 29;
+            this.button19.Text = "筛选重复";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
             // button18
             // 
             this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button18.Location = new System.Drawing.Point(1344, 468);
+            this.button18.Location = new System.Drawing.Point(1344, 469);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(66, 34);
             this.button18.TabIndex = 28;
@@ -457,26 +542,51 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1417, 518);
+            this.tabPage2.Size = new System.Drawing.Size(1416, 511);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "    NameTool    ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button23);
+            this.tabPage3.Controls.Add(this.button22);
             this.tabPage3.Controls.Add(this.listBoxfolder);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1417, 518);
+            this.tabPage3.Size = new System.Drawing.Size(1416, 511);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "    Folder    ";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(251, 15);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(75, 23);
+            this.button23.TabIndex = 23;
+            this.button23.Text = "button23";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(128, 7);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(117, 36);
+            this.button22.TabIndex = 22;
+            this.button22.Text = "合并视频";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button21);
+            this.tabPage4.Controls.Add(this.checkBox1);
+            this.tabPage4.Controls.Add(this.button20);
             this.tabPage4.Controls.Add(this.button17);
             this.tabPage4.Controls.Add(this.button16);
             this.tabPage4.Controls.Add(this.textBox3);
@@ -488,10 +598,40 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1417, 518);
+            this.tabPage4.Size = new System.Drawing.Size(1416, 511);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "NameTool";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(731, 19);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(132, 39);
+            this.button21.TabIndex = 34;
+            this.button21.Text = "对比";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(168, 28);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(106, 22);
+            this.checkBox1.TabIndex = 33;
+            this.checkBox1.Text = "所有文件";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(168, 440);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(112, 36);
+            this.button20.TabIndex = 32;
+            this.button20.Text = "番号大写";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button17
             // 
@@ -516,7 +656,7 @@
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(1179, 391);
+            this.textBox3.Location = new System.Drawing.Point(1178, 391);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(209, 28);
             this.textBox3.TabIndex = 5;
@@ -524,7 +664,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(1179, 277);
+            this.textBox2.Location = new System.Drawing.Point(1178, 277);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(209, 28);
             this.textBox2.TabIndex = 4;
@@ -532,7 +672,7 @@
             // button15
             // 
             this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button15.Location = new System.Drawing.Point(1179, 328);
+            this.button15.Location = new System.Drawing.Point(1178, 328);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(117, 39);
             this.button15.TabIndex = 3;
@@ -565,98 +705,19 @@
             this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.richTextBox2.Location = new System.Drawing.Point(19, 64);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(1139, 355);
+            this.richTextBox2.Size = new System.Drawing.Size(1138, 348);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
-            // 
-            // IsDel
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.NullValue = false;
-            this.IsDel.DefaultCellStyle = dataGridViewCellStyle7;
-            this.IsDel.HeaderText = "IsDel";
-            this.IsDel.Name = "IsDel";
-            this.IsDel.Width = 40;
-            // 
-            // Name1
-            // 
-            this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Name1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Name1.FillWeight = 1000F;
-            this.Name1.HeaderText = "Name1(Data)";
-            this.Name1.Name = "Name1";
-            this.Name1.Width = 143;
-            // 
-            // Name2
-            // 
-            this.Name2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Red;
-            this.Name2.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Name2.FillWeight = 1000F;
-            this.Name2.HeaderText = "Name2(New)";
-            this.Name2.Name = "Name2";
-            this.Name2.Width = 134;
-            // 
-            // Type1
-            // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Type1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Type1.HeaderText = "Type1(Data)";
-            this.Type1.Name = "Type1";
-            // 
-            // Type2
-            // 
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Red;
-            this.Type2.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Type2.HeaderText = "Type2(New)";
-            this.Type2.Name = "Type2";
-            // 
-            // Size1
-            // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Size1.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Size1.HeaderText = "Size1(Data)";
-            this.Size1.Name = "Size1";
-            // 
-            // Size2
-            // 
-            this.Size2.HeaderText = "Size2(New)";
-            this.Size2.Name = "Size2";
-            // 
-            // MD5
-            // 
-            this.MD5.HeaderText = "MD5";
-            this.MD5.Name = "MD5";
-            // 
-            // FilePath
-            // 
-            this.FilePath.HeaderText = "FilePath";
-            this.FilePath.Name = "FilePath";
-            this.FilePath.Width = 550;
-            // 
-            // button19
-            // 
-            this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button19.Location = new System.Drawing.Point(990, 468);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(113, 34);
-            this.button19.TabIndex = 29;
-            this.button19.Text = "筛选重复";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1464, 1032);
+            this.ClientSize = new System.Drawing.Size(1463, 1036);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonDelSame);
             this.Controls.Add(this.label2);
@@ -732,6 +793,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MD5;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
     }
 }
 
