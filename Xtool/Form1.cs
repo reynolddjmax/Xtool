@@ -23,9 +23,9 @@ namespace WindowsFormsApplication1
             this.listBoxFile.DragDrop += new DragEventHandler(listBoxFile_DragDrop);
             this.listBoxFile.DoubleClick += new System.EventHandler(listBoxFile_DoubleClick);
 
-            this.listBoxfolder.DragEnter += new DragEventHandler(listBox2_DragEnter);
-            this.listBoxfolder.DragDrop += new DragEventHandler(listBox2_DragDrop);
-            this.listBoxfolder.DoubleClick += new System.EventHandler(this.listBox2_DoubleClick);
+            this.listBoxNameSet.DragEnter += new DragEventHandler(listBox2_DragEnter);
+            this.listBoxNameSet.DragDrop += new DragEventHandler(listBox2_DragDrop);
+            this.listBoxNameSet.DoubleClick += new System.EventHandler(this.listBox2_DoubleClick);
 
 
             setting.LogBox = this.richTextBox1;
@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1
         public void Clear()
         {
             this.listBoxFile.Items.Clear();
-            this.listBoxfolder.Items.Clear();
+            this.listBoxNameSet.Items.Clear();
             this.listBoxMD5.Items.Clear();
 
 
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (string path in this.listBoxfolder.Items)
+            foreach (string path in this.listBoxNameSet.Items)
             {
                 if (Directory.Exists(path))
                 {
@@ -242,12 +242,13 @@ namespace WindowsFormsApplication1
             }
         }
 
+
         private void listBox2_DragDrop(object sender, DragEventArgs e)
         {
             string[] s = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             foreach (string o in s)
             {
-                this.listBoxfolder.Items.Add(o);
+                this.listBoxNameSet.Items.Add(o);
 
             }
 
@@ -266,7 +267,7 @@ namespace WindowsFormsApplication1
 
         private void listBox2_DoubleClick(object sender, EventArgs e)
         {
-            this.listBoxfolder.Items.Clear();
+            this.listBoxNameSet.Items.Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -713,15 +714,7 @@ namespace WindowsFormsApplication1
 
         private void button13_Click(object sender, EventArgs e)
         {
-            List<string> lst = CodeClass.ScanFile(@"G:\TV(c)", "*.flv1", SearchOption.AllDirectories);
-
-
-            foreach (string path in lst)
-	        {
-                string newPath = path.Replace("flv1", "flv");
-
-                System.IO.File.Move(path,newPath);
-	        }
+            
         }
 
         private void button13_Click_1(object sender, EventArgs e)
@@ -870,15 +863,15 @@ namespace WindowsFormsApplication1
 
         private void button22_Click(object sender, EventArgs e)
         {
-            string WorkPath = @"Y:\XX\ConcatVideo\";
+            string WorkPath = setting.ConcatVideoPath;
             System.IO.Directory.CreateDirectory(WorkPath);
             string txtLst = "";
             string txtSh = "";
 
             int index = 0;
-            foreach (string folder in listBoxfolder.Items)
+            foreach (string folder in listBoxNameSet.Items)
             {
-
+                if (!Directory.Exists(folder)) continue;
 
                 List<string> files = CodeAll.ScanVideo(folder, "*", SearchOption.TopDirectoryOnly);
 
@@ -909,17 +902,24 @@ namespace WindowsFormsApplication1
 
         string ConcatTransFolder(string folder)
         {
-            folder = folder.Replace("\\", "/");
-            folder = folder.Replace("Y:/", "/home/Raid/");
+
+            if (folder.IndexOf(":") == 1) //如果路径为盘符
+            {
+                folder = folder.Replace("\\", "/");
+                folder = folder.Substring(3);
+                folder = setting.localPath + folder;
+            }
+            else //如果路劲为IP
+            {
+                folder = folder.Replace(setting.IP,setting.localPath);
+                folder = folder.Replace("\\", "/");
+            }
+            
+
             return folder;
         }
 
-        private void button23_Click(object sender, EventArgs e)
-        {
-            string xx = "里美ゆりあ\n7777";
-            DLL.TxtStr.Write(xx, @"C:\Users\Public\Desktop\ConcatVideo\11.txt", true, System.Text.Encoding.GetEncoding("UTF-8"));
         
-        }
 
         private void button24_Click(object sender, EventArgs e)
         {

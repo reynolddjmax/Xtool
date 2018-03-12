@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1
 
             //////////////////////////////////////////////
 
-            string TxtPath = DelPath + "\\" + Name + " " + size + ".txt";
+            string TxtPath = DelPath + Name + " " + size + ".txt";
 
             if (File.Exists(TxtPath) == false)
             {

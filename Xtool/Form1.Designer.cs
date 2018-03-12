@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.listBoxFile = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBoxfolder = new System.Windows.Forms.ListBox();
+            this.listBoxNameSet = new System.Windows.Forms.ListBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.listBoxMD5 = new System.Windows.Forms.ListBox();
@@ -74,9 +74,9 @@
             this.button18 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button23 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button24 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button20 = new System.Windows.Forms.Button();
@@ -88,7 +88,6 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button24 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -290,10 +289,10 @@
             // 
             // IsDel
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.NullValue = false;
-            this.IsDel.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.NullValue = false;
+            this.IsDel.DefaultCellStyle = dataGridViewCellStyle7;
             this.IsDel.HeaderText = "IsDel";
             this.IsDel.Name = "IsDel";
             this.IsDel.Width = 40;
@@ -301,8 +300,8 @@
             // Name1
             // 
             this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Name1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Name1.DefaultCellStyle = dataGridViewCellStyle8;
             this.Name1.FillWeight = 1000F;
             this.Name1.HeaderText = "Name1(Data)";
             this.Name1.Name = "Name1";
@@ -311,9 +310,9 @@
             // Name2
             // 
             this.Name2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Red;
-            this.Name2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Red;
+            this.Name2.DefaultCellStyle = dataGridViewCellStyle9;
             this.Name2.FillWeight = 1000F;
             this.Name2.HeaderText = "Name2(New)";
             this.Name2.Name = "Name2";
@@ -321,23 +320,23 @@
             // 
             // Type1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Type1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Type1.DefaultCellStyle = dataGridViewCellStyle10;
             this.Type1.HeaderText = "Type1(Data)";
             this.Type1.Name = "Type1";
             // 
             // Type2
             // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Red;
-            this.Type2.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Red;
+            this.Type2.DefaultCellStyle = dataGridViewCellStyle11;
             this.Type2.HeaderText = "Type2(New)";
             this.Type2.Name = "Type2";
             // 
             // Size1
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Size1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Size1.DefaultCellStyle = dataGridViewCellStyle12;
             this.Size1.HeaderText = "Size1(Data)";
             this.Size1.Name = "Size1";
             // 
@@ -376,17 +375,17 @@
             this.textBox1.Size = new System.Drawing.Size(434, 28);
             this.textBox1.TabIndex = 20;
             // 
-            // listBoxfolder
+            // listBoxNameSet
             // 
-            this.listBoxfolder.AllowDrop = true;
-            this.listBoxfolder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listBoxfolder.FormattingEnabled = true;
-            this.listBoxfolder.ItemHeight = 18;
-            this.listBoxfolder.Location = new System.Drawing.Point(4, 89);
-            this.listBoxfolder.Margin = new System.Windows.Forms.Padding(4);
-            this.listBoxfolder.Name = "listBoxfolder";
-            this.listBoxfolder.Size = new System.Drawing.Size(1408, 418);
-            this.listBoxfolder.TabIndex = 21;
+            this.listBoxNameSet.AllowDrop = true;
+            this.listBoxNameSet.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listBoxNameSet.FormattingEnabled = true;
+            this.listBoxNameSet.ItemHeight = 18;
+            this.listBoxNameSet.Location = new System.Drawing.Point(4, 89);
+            this.listBoxNameSet.Margin = new System.Windows.Forms.Padding(4);
+            this.listBoxNameSet.Name = "listBoxNameSet";
+            this.listBoxNameSet.Size = new System.Drawing.Size(1408, 418);
+            this.listBoxNameSet.TabIndex = 21;
             // 
             // button9
             // 
@@ -550,9 +549,8 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button23);
             this.tabPage3.Controls.Add(this.button22);
-            this.tabPage3.Controls.Add(this.listBoxfolder);
+            this.tabPage3.Controls.Add(this.listBoxNameSet);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
@@ -562,16 +560,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "    Folder    ";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(251, 15);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
-            this.button23.TabIndex = 23;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // button22
             // 
@@ -605,6 +593,16 @@
             this.tabPage4.Text = "NameTool";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(309, 447);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(75, 23);
+            this.button24.TabIndex = 35;
+            this.button24.Text = "button24";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
             // button21
             // 
             this.button21.Location = new System.Drawing.Point(731, 19);
@@ -631,7 +629,7 @@
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(112, 36);
             this.button20.TabIndex = 32;
-            this.button20.Text = "番号大写";
+            this.button20.Text = "大写";
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
@@ -714,16 +712,6 @@
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(309, 447);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 23);
-            this.button24.TabIndex = 35;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -773,7 +761,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBoxfolder;
+        private System.Windows.Forms.ListBox listBoxNameSet;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.ListBox listBoxMD5;
@@ -809,7 +797,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button24;
     }
 }
