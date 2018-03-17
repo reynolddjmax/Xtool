@@ -23,9 +23,9 @@ namespace WindowsFormsApplication1
             this.listBoxFile.DragDrop += new DragEventHandler(listBoxFile_DragDrop);
             this.listBoxFile.DoubleClick += new System.EventHandler(listBoxFile_DoubleClick);
 
-            this.listBoxNameSet.DragEnter += new DragEventHandler(listBox2_DragEnter);
-            this.listBoxNameSet.DragDrop += new DragEventHandler(listBox2_DragDrop);
-            this.listBoxNameSet.DoubleClick += new System.EventHandler(this.listBox2_DoubleClick);
+            this.listBoxNameSet.DragEnter += new DragEventHandler(listBoxNameSet_DragEnter);
+            this.listBoxNameSet.DragDrop += new DragEventHandler(listBoxNameSet_DragDrop);
+            this.listBoxNameSet.DoubleClick += new System.EventHandler(this.listBoxNameSet_DoubleClick);
 
 
             setting.LogBox = this.richTextBox1;
@@ -78,6 +78,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //只判断处理文件夹
             foreach (string path in this.listBoxNameSet.Items)
             {
                 if (Directory.Exists(path))
@@ -207,7 +208,7 @@ namespace WindowsFormsApplication1
 
                 if (System.IO.File.Exists(o))
                 {
-                    if (CodeAll.isVideo(o) || checkBox1.Checked)
+                    if (CodeAll.isVideo(o))
                     {
                         this.listBoxFile.Items.Add(o);
                     }
@@ -230,7 +231,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void listBox2_DragEnter(object sender, DragEventArgs e)
+        private void listBoxNameSet_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
@@ -243,21 +244,34 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void listBox2_DragDrop(object sender, DragEventArgs e)
+        private void listBoxNameSet_DragDrop(object sender, DragEventArgs e)
         {
             string[] s = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             foreach (string o in s)
             {
-                this.listBoxNameSet.Items.Add(o);
+                //如果是文件，只导入视频，如果是文件夹，直接导入
+
+                if (System.IO.File.Exists(o))
+                {
+                    if (CodeAll.isVideo(o))
+                    {
+                        this.listBoxNameSet.Items.Add(o);
+                    }
+
+                }
+                else if (System.IO.Directory.Exists(o))
+                {
+
+                    this.listBoxNameSet.Items.Add(o);
+
+                }
+
+
 
             }
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            InterceptKeys.RunHook();
-        }
 
         private void listBoxFile_DoubleClick(object sender, EventArgs e)
         {
@@ -265,14 +279,9 @@ namespace WindowsFormsApplication1
             this.listBoxMD5.Items.Clear();
         }
 
-        private void listBox2_DoubleClick(object sender, EventArgs e)
+        private void listBoxNameSet_DoubleClick(object sender, EventArgs e)
         {
             this.listBoxNameSet.Items.Clear();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            InterceptKeys.UnHook();
         }
 
 
@@ -283,33 +292,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            string aa = @"Y:\XX\download\蒼井そら全集\040730 XS-2349 Lollipop.avi";
-
-            long lSize = new FileInfo(aa).Length;
-            string size = "";
-
-            if (lSize >= 1073741824)
-            {
-                size = (lSize / 1024.00 / 1024.00 / 1024.00).ToString("F2") + "G";
-            }
-            else if (lSize >= 1048576)
-            {
-                size = (lSize / 1024.00 / 1024.00).ToString("F2") + "MB";
-            }
-            else if (lSize >= 1024)
-            {
-                size = (lSize / 1024.00).ToString("F2") + "KB";
-            }
-            else
-            {
-                size = lSize.ToString("F2") + "B";
-            }
-
-
-            MessageBox.Show(size);
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -353,88 +335,26 @@ namespace WindowsFormsApplication1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            List<string> newPathlst = new List<string>();
+            List<string> Namelst = System.Text.RegularExpressions.Regex.Split(this.richTextBox2.Text.Trim(), "\n").ToList<string>();
 
-            foreach (string oldPath in this.listBoxFile.Items)
+            this.richTextBox2.Text = "";
+
+            foreach (string item in Namelst)
             {
+                string NewName = this.textBox3.Text + " - " + item;
 
-                string FileName = System.IO.Path.GetFileName(oldPath);
-
-                string newPath = System.IO.Path.GetDirectoryName(oldPath) + "\\" + this.textBox1.Text + " " + FileName;
-
-                try
-                {
-                    System.IO.File.Move(oldPath, newPath);
-                }
-                catch (Exception)
-                {
-                    
-                    throw;
-                }
                 
 
-                newPathlst.Add(newPath);
-
+                this.richTextBox2.Text += NewName + "\n";
             }
 
-            this.listBoxFile.Items.Clear();
-
-            foreach (var item in newPathlst)
-            {
-                if (System.IO.File.Exists(item))
-                {
-                    this.listBoxFile.Items.Add(item);
-                }
-                else
-                {
-                    CodeAll.AddLog("修改文件名失败", item,"");
-                }
-            }
+            this.richTextBox2.Text = this.richTextBox2.Text.Trim();
 
 
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            List<string> newPathlst = new List<string>();
 
-            foreach (string oldPath in this.listBoxFile.Items)
-            {
-
-                string FileName = System.IO.Path.GetFileName(oldPath);
-
-                string newPath = System.IO.Path.GetDirectoryName(oldPath) + "\\" + FileName.Replace(this.textBox1.Text, "");
-
-                try
-                {
-                    System.IO.File.Move(oldPath, newPath);
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
-
-
-                newPathlst.Add(newPath);
-
-            }
-
-            this.listBoxFile.Items.Clear();
-
-            foreach (var item in newPathlst)
-            {
-                if (System.IO.File.Exists(item))
-                {
-                    this.listBoxFile.Items.Add(item);
-                }
-                else
-                {
-                    CodeAll.AddLog("修改文件名失败", item, "");
-                }
-            }
-        }
 
 
         //检查文件是否存在数据库
@@ -719,13 +639,18 @@ namespace WindowsFormsApplication1
 
         private void button13_Click_1(object sender, EventArgs e)
         {
+            //是文件除去后缀添加，是文件夹直接添加
             this.richTextBox2.Text = "";
-            foreach (string item in this.listBoxFile.Items)
+            foreach (string item in this.listBoxNameSet.Items)
             {
                 string Name = "";
                 if (System.IO.File.Exists(item))
                 {
                     Name = System.IO.Path.GetFileNameWithoutExtension(item);
+                }
+                else if (System.IO.Directory.Exists(item))
+                {
+                    Name = System.IO.Path.GetFileName(item);
                 }
                 else
                 {
@@ -740,20 +665,26 @@ namespace WindowsFormsApplication1
 
         private void button14_Click(object sender, EventArgs e)
         {
+            //是文件添加后缀修改，是文件夹直接修改
+
             List<string> Namelst = System.Text.RegularExpressions.Regex.Split(this.richTextBox2.Text.Trim(),"\n").ToList<string>();
-            if (Namelst.Count != listBoxFile.Items.Count)
+            if (Namelst.Count != listBoxNameSet.Items.Count)
             {
                 MessageBox.Show("文件数不一致");
                 return;
             }
 
-            for (int i = 0; i < listBoxFile.Items.Count; i++)
+            for (int i = 0; i < listBoxNameSet.Items.Count; i++)
             {
-                string OriPath = listBoxFile.Items[i].ToString();
+                string OriPath = listBoxNameSet.Items[i].ToString();
 
                 if (File.Exists(OriPath))
                 {
                     File.Move(OriPath, Path.GetDirectoryName(OriPath) + "\\" + Namelst[i].Trim() + Path.GetExtension(OriPath));
+                }
+                else if (Directory.Exists(OriPath))
+                {
+                    Directory.Move(OriPath, Path.GetDirectoryName(OriPath) + "\\" + Namelst[i].Trim());
                 }
                 else
                 {
@@ -849,9 +780,9 @@ namespace WindowsFormsApplication1
         {
             List<string> blst = System.Text.RegularExpressions.Regex.Split(this.richTextBox2.Text.Trim(), "\n").ToList<string>();
             List<string> alst = new List<string>();
-            for (int i = 0; i < listBoxFile.Items.Count; i++)
+            for (int i = 0; i < listBoxNameSet.Items.Count; i++)
             {
-                string OriPath = System.IO.Path.GetFileNameWithoutExtension(listBoxFile.Items[i].ToString());
+                string OriPath = System.IO.Path.GetFileNameWithoutExtension(listBoxNameSet.Items[i].ToString());
 
                 alst.Add(OriPath);
             }
@@ -863,6 +794,7 @@ namespace WindowsFormsApplication1
 
         private void button22_Click(object sender, EventArgs e)
         {
+            //只处理文件夹
             string WorkPath = setting.ConcatVideoPath;
             System.IO.Directory.CreateDirectory(WorkPath);
             string txtLst = "";
@@ -923,7 +855,7 @@ namespace WindowsFormsApplication1
 
         private void button24_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
