@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1
 
 
             setting.LogBox = this.richTextBox1;
+
         }
 
 
@@ -116,7 +117,7 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            access.Open();
             if (MessageBox.Show("是否确认删除", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK) return;
 
             
@@ -182,7 +183,7 @@ namespace WindowsFormsApplication1
 
             Clear();
 
-
+            access.Close();
         }
 
 
@@ -295,6 +296,8 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
+            access.Open();
+
             int n = 0;
 
             for (int i = 0; i < this.listBoxFile.Items.Count; i++)
@@ -331,6 +334,8 @@ namespace WindowsFormsApplication1
 
 
             Clear();
+
+            access.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -341,7 +346,7 @@ namespace WindowsFormsApplication1
 
             foreach (string item in Namelst)
             {
-                string NewName = this.textBox3.Text + " - " + item;
+                string NewName = this.textBox3.Text + " " + item;
 
                 
 
@@ -360,8 +365,11 @@ namespace WindowsFormsApplication1
         //检查文件是否存在数据库
         private void button10_Click(object sender, EventArgs e)
         {
+            access.Open();
             int n = 0;
             this.listBoxMD5.Items.Clear();
+
+
 
             for (int i = 0; i < this.listBoxFile.Items.Count; i++)
             {
@@ -373,6 +381,8 @@ namespace WindowsFormsApplication1
                 //检查数据库是否存在
                 string DataType = "G";
                 access.AccessType AT = access.CheckData(path, DataType, MD5);
+
+
 
                 if (AT == null) 
                 {
@@ -443,6 +453,8 @@ namespace WindowsFormsApplication1
             //检查MD5是否有重复
             List<string> lst = new List<string>();
             CheckSameMD5List();
+
+            access.Close();
         }
 
 
@@ -524,6 +536,7 @@ namespace WindowsFormsApplication1
 
         private void button12_Click(object sender, EventArgs e)
         {
+            access.Open();
 
             if (this.dataGridView1.SelectedRows.Count == -1) return;
             
@@ -572,7 +585,7 @@ namespace WindowsFormsApplication1
 
             }
 
-
+            access.Close();
         }
 
 

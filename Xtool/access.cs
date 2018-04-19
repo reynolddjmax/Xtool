@@ -11,7 +11,22 @@ namespace WindowsFormsApplication1
 {
     public class access
     {
-        
+
+        public static OleDbConnection conn;
+
+
+        public static void Open()
+        {
+            conn = new OleDbConnection();
+            conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + setting.DataPath;
+            conn.Open();
+        }
+
+        public static void Close()
+        {
+            conn.Close();
+        }
+
         public class AccessType
         {
             public string Name;
@@ -24,20 +39,14 @@ namespace WindowsFormsApplication1
 
         public static bool UpdateAccess(string sql)
         {
-            OleDbConnection conn = new OleDbConnection();
             OleDbCommand command = new OleDbCommand();
-            conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + setting.DataPath;
             command.Connection = conn;
+
             command.CommandText = sql;
 
             try
             {
-                conn.Open();
                 command.ExecuteNonQuery();
-                conn.Close();
-
-
-
 
                 return true;
             }
@@ -46,7 +55,6 @@ namespace WindowsFormsApplication1
             {
                 CodeAll.AddLog("数据库操作失败", sql, ex.Message);
 
-                conn.Close();
                 return false;
 
             }
@@ -54,18 +62,17 @@ namespace WindowsFormsApplication1
 
         public static DataTable GetAccess(string sql)
         {
-            OleDbDataReader dr = null;
             OleDbCommand command = new OleDbCommand();
-            OleDbConnection conn = new OleDbConnection();
-            conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + setting.DataPath;
             command.Connection = conn;
+
+            OleDbDataReader dr = null;
             command.CommandText = sql;
             DataTable dt = new DataTable();
-            
+
 
             try
             {
-                conn.Open();
+
                 dr = command.ExecuteReader();
 
                 for (int i = 0; i < dr.FieldCount; i++)
@@ -86,7 +93,6 @@ namespace WindowsFormsApplication1
 
 
                 dr.Dispose();
-                command.Dispose();
 
                 return dt;
 
@@ -170,24 +176,16 @@ namespace WindowsFormsApplication1
 
 
 
-            OleDbConnection conn = new OleDbConnection();
-            OleDbDataReader dr = null;
             OleDbCommand command = new OleDbCommand();
-            conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + setting.DataPath;
             command.Connection = conn;
+            OleDbDataReader dr = null;
             command.CommandText = "select [MD5] from " + DataType + " where [MD5] = '" + MD5 + "'";
 
             try
             {
-                conn.Open();
 
                 dr = command.ExecuteReader();
-
-
-
                 bool Exist = dr.HasRows;
-
-                conn.Close();
                 return Exist;
 
             }
@@ -195,8 +193,6 @@ namespace WindowsFormsApplication1
             {
 
                 CodeAll.AddLog("查询数据库失败", FilePath, ex.Message);
-
-                conn.Close();
 
                 return true;
             }
@@ -217,6 +213,7 @@ namespace WindowsFormsApplication1
 
             DataTable dt = GetAccess("select * from " + DataType + " where MD5='" + MD5 + "'");
 
+            if (dt == null) return null;
 
             AccessType AT = new AccessType();
 

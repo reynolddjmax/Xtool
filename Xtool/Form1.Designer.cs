@@ -67,7 +67,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
@@ -80,23 +79,23 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button24 = new System.Windows.Forms.Button();
+            this.tabPageWeb = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button17 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button24 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(1169, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(779, 11);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 36);
+            this.button1.Size = new System.Drawing.Size(75, 24);
             this.button1.TabIndex = 0;
             this.button1.Text = "文件夹整理";
             this.button1.UseVisualStyleBackColor = true;
@@ -109,19 +108,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxFile.FormattingEnabled = true;
             this.listBoxFile.HorizontalScrollbar = true;
-            this.listBoxFile.ItemHeight = 18;
-            this.listBoxFile.Location = new System.Drawing.Point(4, 30);
-            this.listBoxFile.Margin = new System.Windows.Forms.Padding(4);
+            this.listBoxFile.ItemHeight = 12;
+            this.listBoxFile.Location = new System.Drawing.Point(3, 20);
             this.listBoxFile.Name = "listBoxFile";
-            this.listBoxFile.Size = new System.Drawing.Size(1045, 202);
+            this.listBoxFile.Size = new System.Drawing.Size(698, 136);
             this.listBoxFile.TabIndex = 1;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(129, 283);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(86, 189);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 34);
+            this.button4.Size = new System.Drawing.Size(107, 23);
             this.button4.TabIndex = 4;
             this.button4.Text = "删除文件";
             this.button4.UseVisualStyleBackColor = true;
@@ -130,10 +127,9 @@
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(1335, 826);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(890, 551);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(112, 34);
+            this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 6;
             this.button6.Text = "Clean";
             this.button6.UseVisualStyleBackColor = true;
@@ -145,20 +141,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Font = new System.Drawing.Font("宋体", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Red;
-            this.richTextBox1.Location = new System.Drawing.Point(21, 870);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBox1.Location = new System.Drawing.Point(14, 580);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1425, 146);
+            this.richTextBox1.Size = new System.Drawing.Size(951, 99);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
             // radioButtonG
             // 
             this.radioButtonG.AutoSize = true;
-            this.radioButtonG.Location = new System.Drawing.Point(21, 250);
-            this.radioButtonG.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonG.Location = new System.Drawing.Point(14, 167);
             this.radioButtonG.Name = "radioButtonG";
-            this.radioButtonG.Size = new System.Drawing.Size(150, 22);
+            this.radioButtonG.Size = new System.Drawing.Size(101, 16);
             this.radioButtonG.TabIndex = 10;
             this.radioButtonG.TabStop = true;
             this.radioButtonG.Text = "G(不创建文本)";
@@ -167,10 +161,9 @@
             // radioButtonF
             // 
             this.radioButtonF.AutoSize = true;
-            this.radioButtonF.Location = new System.Drawing.Point(182, 250);
-            this.radioButtonF.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonF.Location = new System.Drawing.Point(121, 167);
             this.radioButtonF.Name = "radioButtonF";
-            this.radioButtonF.Size = new System.Drawing.Size(42, 22);
+            this.radioButtonF.Size = new System.Drawing.Size(29, 16);
             this.radioButtonF.TabIndex = 11;
             this.radioButtonF.TabStop = true;
             this.radioButtonF.Text = "F";
@@ -179,10 +172,9 @@
             // radioButtonJ
             // 
             this.radioButtonJ.AutoSize = true;
-            this.radioButtonJ.Location = new System.Drawing.Point(260, 250);
-            this.radioButtonJ.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonJ.Location = new System.Drawing.Point(173, 167);
             this.radioButtonJ.Name = "radioButtonJ";
-            this.radioButtonJ.Size = new System.Drawing.Size(42, 22);
+            this.radioButtonJ.Size = new System.Drawing.Size(29, 16);
             this.radioButtonJ.TabIndex = 12;
             this.radioButtonJ.TabStop = true;
             this.radioButtonJ.Text = "J";
@@ -191,10 +183,9 @@
             // radioButtonTV
             // 
             this.radioButtonTV.AutoSize = true;
-            this.radioButtonTV.Location = new System.Drawing.Point(338, 250);
-            this.radioButtonTV.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonTV.Location = new System.Drawing.Point(225, 167);
             this.radioButtonTV.Name = "radioButtonTV";
-            this.radioButtonTV.Size = new System.Drawing.Size(51, 22);
+            this.radioButtonTV.Size = new System.Drawing.Size(35, 16);
             this.radioButtonTV.TabIndex = 13;
             this.radioButtonTV.TabStop = true;
             this.radioButtonTV.Text = "TV";
@@ -203,10 +194,9 @@
             // radioButtonTXT
             // 
             this.radioButtonTXT.AutoSize = true;
-            this.radioButtonTXT.Location = new System.Drawing.Point(415, 250);
-            this.radioButtonTXT.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonTXT.Location = new System.Drawing.Point(277, 167);
             this.radioButtonTXT.Name = "radioButtonTXT";
-            this.radioButtonTXT.Size = new System.Drawing.Size(96, 22);
+            this.radioButtonTXT.Size = new System.Drawing.Size(65, 16);
             this.radioButtonTXT.TabIndex = 15;
             this.radioButtonTXT.TabStop = true;
             this.radioButtonTXT.Text = "OnlyTXT";
@@ -214,10 +204,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(299, 283);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(199, 189);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(165, 34);
+            this.button5.Size = new System.Drawing.Size(110, 23);
             this.button5.TabIndex = 16;
             this.button5.Text = "添加数据库";
             this.button5.UseVisualStyleBackColor = true;
@@ -240,13 +229,12 @@
             this.Size2,
             this.MD5,
             this.FilePath});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 335);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 223);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1412, 375);
+            this.dataGridView1.Size = new System.Drawing.Size(941, 250);
             this.dataGridView1.TabIndex = 18;
             // 
             // IsDel
@@ -267,7 +255,7 @@
             this.Name1.FillWeight = 1000F;
             this.Name1.HeaderText = "Name1(Data)";
             this.Name1.Name = "Name1";
-            this.Name1.Width = 143;
+            this.Name1.Width = 96;
             // 
             // Name2
             // 
@@ -278,7 +266,7 @@
             this.Name2.FillWeight = 1000F;
             this.Name2.HeaderText = "Name2(New)";
             this.Name2.Name = "Name2";
-            this.Name2.Width = 134;
+            this.Name2.Width = 90;
             // 
             // Type1
             // 
@@ -321,10 +309,9 @@
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(1180, 603);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Location = new System.Drawing.Point(787, 402);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(123, 34);
+            this.button8.Size = new System.Drawing.Size(82, 23);
             this.button8.TabIndex = 19;
             this.button8.Text = "添加文件名";
             this.button8.UseVisualStyleBackColor = true;
@@ -334,19 +321,17 @@
             // 
             this.listBoxNameSet.AllowDrop = true;
             this.listBoxNameSet.FormattingEnabled = true;
-            this.listBoxNameSet.ItemHeight = 18;
-            this.listBoxNameSet.Location = new System.Drawing.Point(13, 17);
-            this.listBoxNameSet.Margin = new System.Windows.Forms.Padding(4);
+            this.listBoxNameSet.ItemHeight = 12;
+            this.listBoxNameSet.Location = new System.Drawing.Point(9, 11);
             this.listBoxNameSet.Name = "listBoxNameSet";
-            this.listBoxNameSet.Size = new System.Drawing.Size(1138, 328);
+            this.listBoxNameSet.Size = new System.Drawing.Size(760, 220);
             this.listBoxNameSet.TabIndex = 21;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(8, 283);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Location = new System.Drawing.Point(5, 189);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(112, 34);
+            this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 24;
             this.button10.Text = "检查";
             this.button10.UseVisualStyleBackColor = true;
@@ -356,21 +341,19 @@
             // 
             this.listBoxMD5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxMD5.FormattingEnabled = true;
-            this.listBoxMD5.ItemHeight = 18;
-            this.listBoxMD5.Location = new System.Drawing.Point(1058, 30);
-            this.listBoxMD5.Margin = new System.Windows.Forms.Padding(4);
+            this.listBoxMD5.ItemHeight = 12;
+            this.listBoxMD5.Location = new System.Drawing.Point(705, 20);
             this.listBoxMD5.Name = "listBoxMD5";
-            this.listBoxMD5.Size = new System.Drawing.Size(358, 202);
+            this.listBoxMD5.Size = new System.Drawing.Size(240, 136);
             this.listBoxMD5.TabIndex = 25;
             this.listBoxMD5.SelectedIndexChanged += new System.EventHandler(this.listBoxMD5_SelectChange);
             // 
             // button11
             // 
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button11.Location = new System.Drawing.Point(9, 725);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
+            this.button11.Location = new System.Drawing.Point(6, 483);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(112, 34);
+            this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 26;
             this.button11.Text = "删除文件";
             this.button11.UseVisualStyleBackColor = true;
@@ -379,10 +362,9 @@
             // button12
             // 
             this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button12.Location = new System.Drawing.Point(1110, 725);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
+            this.button12.Location = new System.Drawing.Point(740, 483);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(227, 34);
+            this.button12.Size = new System.Drawing.Size(151, 23);
             this.button12.TabIndex = 27;
             this.button12.Text = "重命名选中行，更新del";
             this.button12.UseVisualStyleBackColor = true;
@@ -391,20 +373,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1014, 8);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(676, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 18);
+            this.label2.Size = new System.Drawing.Size(23, 12);
             this.label2.TabIndex = 28;
             this.label2.Text = "...";
             // 
             // buttonDelSame
             // 
             this.buttonDelSame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelSame.Location = new System.Drawing.Point(1266, 240);
-            this.buttonDelSame.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDelSame.Location = new System.Drawing.Point(844, 160);
             this.buttonDelSame.Name = "buttonDelSame";
-            this.buttonDelSame.Size = new System.Drawing.Size(142, 34);
+            this.buttonDelSame.Size = new System.Drawing.Size(95, 23);
             this.buttonDelSame.TabIndex = 29;
             this.buttonDelSame.Text = "删除重复文件";
             this.buttonDelSame.UseVisualStyleBackColor = true;
@@ -417,14 +397,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageWeb);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.ItemSize = new System.Drawing.Size(120, 30);
-            this.tabControl1.Location = new System.Drawing.Point(21, 13);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Location = new System.Drawing.Point(14, 9);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1424, 805);
+            this.tabControl1.Size = new System.Drawing.Size(949, 537);
             this.tabControl1.TabIndex = 31;
             // 
             // tabPage1
@@ -447,10 +426,9 @@
             this.tabPage1.Controls.Add(this.radioButtonTV);
             this.tabPage1.Controls.Add(this.radioButtonTXT);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1416, 767);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(941, 499);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "    DataBase    ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -458,9 +436,10 @@
             // button19
             // 
             this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button19.Location = new System.Drawing.Point(990, 725);
+            this.button19.Location = new System.Drawing.Point(660, 483);
+            this.button19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(113, 34);
+            this.button19.Size = new System.Drawing.Size(75, 23);
             this.button19.TabIndex = 29;
             this.button19.Text = "筛选重复";
             this.button19.UseVisualStyleBackColor = true;
@@ -469,26 +448,14 @@
             // button18
             // 
             this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button18.Location = new System.Drawing.Point(1344, 725);
+            this.button18.Location = new System.Drawing.Point(896, 483);
+            this.button18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(66, 34);
+            this.button18.Size = new System.Drawing.Size(44, 23);
             this.button18.TabIndex = 28;
             this.button18.Text = "全否";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.button17);
-            this.tabPage3.Controls.Add(this.button24);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1416, 767);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "    Other    ";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
@@ -507,9 +474,10 @@
             this.tabPage4.Controls.Add(this.button13);
             this.tabPage4.Controls.Add(this.richTextBox2);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1416, 767);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Size = new System.Drawing.Size(941, 499);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "   NameTool   ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -517,9 +485,10 @@
             // button22
             // 
             this.button22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button22.Location = new System.Drawing.Point(1169, 60);
+            this.button22.Location = new System.Drawing.Point(779, 40);
+            this.button22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(112, 36);
+            this.button22.Size = new System.Drawing.Size(75, 24);
             this.button22.TabIndex = 22;
             this.button22.Text = "合并视频";
             this.button22.UseVisualStyleBackColor = true;
@@ -528,9 +497,10 @@
             // button21
             // 
             this.button21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button21.Location = new System.Drawing.Point(328, 691);
+            this.button21.Location = new System.Drawing.Point(219, 461);
+            this.button21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(109, 39);
+            this.button21.Size = new System.Drawing.Size(73, 26);
             this.button21.TabIndex = 34;
             this.button21.Text = "对比";
             this.button21.UseVisualStyleBackColor = true;
@@ -540,9 +510,10 @@
             // 
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 736);
+            this.checkBox1.Location = new System.Drawing.Point(11, 490);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(106, 22);
+            this.checkBox1.Size = new System.Drawing.Size(72, 16);
             this.checkBox1.TabIndex = 33;
             this.checkBox1.Text = "所有文件";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -550,9 +521,10 @@
             // button20
             // 
             this.button20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button20.Location = new System.Drawing.Point(128, 691);
+            this.button20.Location = new System.Drawing.Point(85, 461);
+            this.button20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(109, 39);
+            this.button20.Size = new System.Drawing.Size(73, 26);
             this.button20.TabIndex = 32;
             this.button20.Text = "大写";
             this.button20.UseVisualStyleBackColor = true;
@@ -561,9 +533,10 @@
             // button16
             // 
             this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button16.Location = new System.Drawing.Point(1180, 380);
+            this.button16.Location = new System.Drawing.Point(787, 253);
+            this.button16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(186, 39);
+            this.button16.Size = new System.Drawing.Size(124, 26);
             this.button16.TabIndex = 6;
             this.button16.Text = "S站名称去英文";
             this.button16.UseVisualStyleBackColor = true;
@@ -572,25 +545,28 @@
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(1179, 554);
+            this.textBox3.Location = new System.Drawing.Point(786, 369);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 28);
+            this.textBox3.Size = new System.Drawing.Size(141, 21);
             this.textBox3.TabIndex = 5;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(1179, 440);
+            this.textBox2.Location = new System.Drawing.Point(786, 293);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 28);
+            this.textBox2.Size = new System.Drawing.Size(141, 21);
             this.textBox2.TabIndex = 4;
             // 
             // button15
             // 
             this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button15.Location = new System.Drawing.Point(1179, 491);
+            this.button15.Location = new System.Drawing.Point(786, 327);
+            this.button15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(117, 39);
+            this.button15.Size = new System.Drawing.Size(78, 26);
             this.button15.TabIndex = 3;
             this.button15.Text = "替换";
             this.button15.UseVisualStyleBackColor = true;
@@ -599,9 +575,10 @@
             // button14
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button14.Location = new System.Drawing.Point(443, 691);
+            this.button14.Location = new System.Drawing.Point(295, 461);
+            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(109, 39);
+            this.button14.Size = new System.Drawing.Size(73, 26);
             this.button14.TabIndex = 2;
             this.button14.Text = "修改";
             this.button14.UseVisualStyleBackColor = true;
@@ -610,9 +587,10 @@
             // button13
             // 
             this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button13.Location = new System.Drawing.Point(13, 691);
+            this.button13.Location = new System.Drawing.Point(9, 461);
+            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(109, 39);
+            this.button13.Size = new System.Drawing.Size(73, 26);
             this.button13.TabIndex = 1;
             this.button13.Text = "获取";
             this.button13.UseVisualStyleBackColor = true;
@@ -624,61 +602,76 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox2.Location = new System.Drawing.Point(13, 352);
+            this.richTextBox2.Location = new System.Drawing.Point(9, 235);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(1138, 323);
+            this.richTextBox2.Size = new System.Drawing.Size(760, 217);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
-            // button24
+            // tabPageWeb
             // 
-            this.button24.Location = new System.Drawing.Point(30, 230);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(117, 46);
-            this.button24.TabIndex = 35;
-            this.button24.Text = "Test";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.tabPageWeb.Location = new System.Drawing.Point(4, 34);
+            this.tabPageWeb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageWeb.Name = "tabPageWeb";
+            this.tabPageWeb.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageWeb.Size = new System.Drawing.Size(941, 499);
+            this.tabPageWeb.TabIndex = 4;
+            this.tabPageWeb.Text = "    Web    ";
+            this.tabPageWeb.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button17);
+            this.tabPage3.Controls.Add(this.button24);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Size = new System.Drawing.Size(941, 499);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "    Other    ";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(30, 26);
+            this.button17.Location = new System.Drawing.Point(20, 17);
+            this.button17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(117, 44);
+            this.button17.Size = new System.Drawing.Size(78, 29);
             this.button17.TabIndex = 7;
             this.button17.Text = "开始监视";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
-            // tabPage2
+            // button24
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1416, 767);
-            this.tabPage2.TabIndex = 4;
-            this.tabPage2.Text = "    Web    ";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.button24.Location = new System.Drawing.Point(20, 153);
+            this.button24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(78, 31);
+            this.button24.TabIndex = 35;
+            this.button24.Text = "Test";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // Form1
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1463, 1036);
+            this.ClientSize = new System.Drawing.Size(975, 691);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button6);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -733,7 +726,7 @@
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageWeb;
     }
 }
 
