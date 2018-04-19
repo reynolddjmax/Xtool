@@ -30,6 +30,9 @@ namespace WindowsFormsApplication1
 
             setting.LogBox = this.richTextBox1;
 
+            Web.Web web1 = new Web.Web();
+            web1.Dock = DockStyle.Fill;
+            this.tabPageWeb.Controls.Add(web1);
         }
 
 
@@ -869,6 +872,11 @@ namespace WindowsFormsApplication1
         private void button24_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.listBoxFile = new System.Windows.Forms.ListBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -104,8 +104,6 @@
             // listBoxFile
             // 
             this.listBoxFile.AllowDrop = true;
-            this.listBoxFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxFile.FormattingEnabled = true;
             this.listBoxFile.HorizontalScrollbar = true;
             this.listBoxFile.ItemHeight = 12;
@@ -239,10 +237,10 @@
             // 
             // IsDel
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle13.NullValue = false;
-            this.IsDel.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle31.NullValue = false;
+            this.IsDel.DefaultCellStyle = dataGridViewCellStyle31;
             this.IsDel.HeaderText = "IsDel";
             this.IsDel.Name = "IsDel";
             this.IsDel.Width = 40;
@@ -250,8 +248,8 @@
             // Name1
             // 
             this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Name1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Name1.DefaultCellStyle = dataGridViewCellStyle32;
             this.Name1.FillWeight = 1000F;
             this.Name1.HeaderText = "Name1(Data)";
             this.Name1.Name = "Name1";
@@ -260,9 +258,9 @@
             // Name2
             // 
             this.Name2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Red;
-            this.Name2.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Red;
+            this.Name2.DefaultCellStyle = dataGridViewCellStyle33;
             this.Name2.FillWeight = 1000F;
             this.Name2.HeaderText = "Name2(New)";
             this.Name2.Name = "Name2";
@@ -270,23 +268,23 @@
             // 
             // Type1
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Type1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Type1.DefaultCellStyle = dataGridViewCellStyle34;
             this.Type1.HeaderText = "Type1(Data)";
             this.Type1.Name = "Type1";
             // 
             // Type2
             // 
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Red;
-            this.Type2.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Red;
+            this.Type2.DefaultCellStyle = dataGridViewCellStyle35;
             this.Type2.HeaderText = "Type2(New)";
             this.Type2.Name = "Type2";
             // 
             // Size1
             // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Size1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Size1.DefaultCellStyle = dataGridViewCellStyle36;
             this.Size1.HeaderText = "Size1(Data)";
             this.Size1.Name = "Size1";
             // 
@@ -427,7 +425,7 @@
             this.tabPage1.Controls.Add(this.radioButtonTXT);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(941, 499);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "    DataBase    ";
@@ -437,7 +435,7 @@
             // 
             this.button19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button19.Location = new System.Drawing.Point(660, 483);
-            this.button19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button19.Margin = new System.Windows.Forms.Padding(2);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(75, 23);
             this.button19.TabIndex = 29;
@@ -449,7 +447,7 @@
             // 
             this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button18.Location = new System.Drawing.Point(896, 483);
-            this.button18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(44, 23);
             this.button18.TabIndex = 28;
@@ -474,9 +472,9 @@
             this.tabPage4.Controls.Add(this.button13);
             this.tabPage4.Controls.Add(this.richTextBox2);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(941, 499);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "   NameTool   ";
@@ -486,7 +484,7 @@
             // 
             this.button22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button22.Location = new System.Drawing.Point(779, 40);
-            this.button22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button22.Margin = new System.Windows.Forms.Padding(2);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(75, 24);
             this.button22.TabIndex = 22;
@@ -498,7 +496,7 @@
             // 
             this.button21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button21.Location = new System.Drawing.Point(219, 461);
-            this.button21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button21.Margin = new System.Windows.Forms.Padding(2);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(73, 26);
             this.button21.TabIndex = 34;
@@ -511,7 +509,7 @@
             this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(11, 490);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(72, 16);
             this.checkBox1.TabIndex = 33;
@@ -522,7 +520,7 @@
             // 
             this.button20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button20.Location = new System.Drawing.Point(85, 461);
-            this.button20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(73, 26);
             this.button20.TabIndex = 32;
@@ -534,7 +532,7 @@
             // 
             this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button16.Location = new System.Drawing.Point(787, 253);
-            this.button16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button16.Margin = new System.Windows.Forms.Padding(2);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(124, 26);
             this.button16.TabIndex = 6;
@@ -546,7 +544,7 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(786, 369);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(141, 21);
             this.textBox3.TabIndex = 5;
@@ -555,7 +553,7 @@
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(786, 293);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(141, 21);
             this.textBox2.TabIndex = 4;
@@ -564,7 +562,7 @@
             // 
             this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button15.Location = new System.Drawing.Point(786, 327);
-            this.button15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(78, 26);
             this.button15.TabIndex = 3;
@@ -576,7 +574,7 @@
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button14.Location = new System.Drawing.Point(295, 461);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(73, 26);
             this.button14.TabIndex = 2;
@@ -588,7 +586,7 @@
             // 
             this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button13.Location = new System.Drawing.Point(9, 461);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(73, 26);
             this.button13.TabIndex = 1;
@@ -603,7 +601,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.richTextBox2.Location = new System.Drawing.Point(9, 235);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(760, 217);
             this.richTextBox2.TabIndex = 0;
@@ -612,9 +610,9 @@
             // tabPageWeb
             // 
             this.tabPageWeb.Location = new System.Drawing.Point(4, 34);
-            this.tabPageWeb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageWeb.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageWeb.Name = "tabPageWeb";
-            this.tabPageWeb.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageWeb.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageWeb.Size = new System.Drawing.Size(941, 499);
             this.tabPageWeb.TabIndex = 4;
             this.tabPageWeb.Text = "    Web    ";
@@ -626,7 +624,7 @@
             this.tabPage3.Controls.Add(this.button24);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(941, 499);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "    Other    ";
@@ -635,7 +633,7 @@
             // button17
             // 
             this.button17.Location = new System.Drawing.Point(20, 17);
-            this.button17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(78, 29);
             this.button17.TabIndex = 7;
@@ -646,7 +644,7 @@
             // button24
             // 
             this.button24.Location = new System.Drawing.Point(20, 153);
-            this.button24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(78, 31);
             this.button24.TabIndex = 35;
