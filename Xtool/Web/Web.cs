@@ -15,5 +15,10 @@ namespace WindowsFormsApplication1.Web
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -696,11 +696,15 @@ namespace WindowsFormsApplication1
 
                 if (File.Exists(OriPath))
                 {
-                    File.Move(OriPath, Path.GetDirectoryName(OriPath) + "\\" + Namelst[i].Trim() + Path.GetExtension(OriPath));
+                    string newPath = Path.GetDirectoryName(OriPath) + "\\" + Namelst[i].Trim() + Path.GetExtension(OriPath);
+                    if (File.Exists(newPath)) continue;
+                    File.Move(OriPath, newPath);
                 }
                 else if (Directory.Exists(OriPath))
                 {
-                    Directory.Move(OriPath, Path.GetDirectoryName(OriPath) + "\\" + Namelst[i].Trim());
+                    string newPath = Path.GetDirectoryName(OriPath) + "\\" + Namelst[i].Trim();
+                    if (Directory.Exists(newPath)) continue;
+                    Directory.Move(OriPath, newPath);
                 }
                 else
                 {

@@ -10,7 +10,10 @@ namespace WindowsFormsApplication1
         public static System.Windows.Forms.RichTextBox LogBox;
 
         public static string IP = @"\\192.168.2.80\";
-        
+
+
+        //Web Sexinsex 数据库
+        public static string SSDataPath = Environment.CurrentDirectory + @"\sexinsex.mdb";
 
         //movie 数据库
         public static string DataPath = Environment.CurrentDirectory + @"\data.mdb";
@@ -18,6 +21,10 @@ namespace WindowsFormsApplication1
         public static string TempDelTxtPath = Environment.CurrentDirectory + @"\Del\";
         //movie 删除TXT目录
         public static string DelTxtPath = IP + @"Raid\XX\Del\";
+
+
+        //everything 目录
+        public static string EverythingPath = IP + @"Raid\Soft\everything\everything.exe";
 
         //ConvertVideo
         public static string ConcatVideoPath = IP + @"Raid\XX\ConcatVideo\";

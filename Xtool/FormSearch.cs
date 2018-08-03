@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1
             }
 
 
-            DLL.SystemCMD.RunCmd("cmd.exe","c:\\Soft\\everything\\Everything.exe -s \"" + Str + "\"");
+            DLL.SystemCMD.RunCmd("cmd.exe", setting.EverythingPath + " -s \"" + Str + "\"");
         }
 
         //拖入文件搜索
@@ -160,7 +160,7 @@ namespace WindowsFormsApplication1
                     
                 }
 
-                if (Str != "") DLL.SystemCMD.RunCmd("cmd.exe", "c:\\Soft\\everything\\Everything.exe -s \"" + Str + "\"");
+                if (Str != "") DLL.SystemCMD.RunCmd("cmd.exe", setting.EverythingPath + " -s \"" + Str + "\"");
 
 
             }

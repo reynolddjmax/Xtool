@@ -22,6 +22,13 @@ namespace WindowsFormsApplication1
             conn.Open();
         }
 
+        public static void Open(string Path)
+        {
+            conn = new OleDbConnection();
+            conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Path;
+            conn.Open();
+        }
+
         public static void Close()
         {
             conn.Close();
