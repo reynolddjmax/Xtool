@@ -257,7 +257,11 @@ namespace WindowsFormsApplication1
 
                 if (System.IO.File.Exists(o))
                 {
-                    if (CodeAll.isVideo(o))
+                    if (checkBox1.Checked)
+                    {
+                        this.listBoxNameSet.Items.Add(o);
+                    }
+                    else if (CodeAll.isVideo(o))
                     {
                         this.listBoxNameSet.Items.Add(o);
                     }
@@ -768,7 +772,7 @@ namespace WindowsFormsApplication1
 
 
 
-                if (serolst.Count >= 3)
+                if (serolst.Count >= 2)
                 {
 
 

@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
             string str = "|" + Path.Substring(Path.LastIndexOf(".") + 1) + "|";
 
 
-            string Type = "|mp4|mkv|flv|wmv|rm|rmvb|mov|3gp|avi|mpg|qt|f4v|m4v|imv|vob|";
+            string Type = "|mp4|mkv|flv|wmv|rm|rmvb|mov|3gp|avi|mpg|qt|f4v|m4v|imv|vob|ts|srt|ass|";
 
 
             return Type.IndexOf(str.ToLower()) != -1;
